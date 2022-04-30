@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/css/all.css">
+    <style>
+        *{
+            /* overflow: hidden; */
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+
+        }
+        .head{
+            position: relative;
+            background-image: url("car.png");
+            width: 100vw;
+            height: 70vh;
+            background-repeat:round;
+            /* border: 2px solid red; */
+            margin: 0px;
+            padding: 0px;
+            top: 80px;
+            z-index: 1;
+        }
+        .mid{
+            
+            overflow: auto;
+            width: 528px;
+            margin: auto;
+            text-align: left;
+            position: relative;
+            
+            /* top:20px; */
+            bottom: 65px;
+            background-color: #ffffff;
+            border-radius: 64px;
+            filter: brightness(1.5);
+            /* position:sticky; */
+        }
+        /* .mid{
+            position: sticky;
+            margin: auto;
+        } */
+        nav ul{
+            /* position: fixed; */
+            color: aliceblue;
+            font-family:'Montserrat', sans-serif;
+            font-weight: 900;
+            list-style: none;
+            
+        }
+        ul li{
+            /* position: fixed; */
+            margin-right: 32px;
+            float: left;
+            padding-right: -4px;
+            position: relative;
+            left: 63px;
+            margin-bottom: 4px;
+            bottom: 6px;
+            
+            
+
+        }
+        li a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color:black;
+            background-color: rgb(192, 223, 56);
+            filter:drop-shadow(2px 9px 6px black);
+            border: 2px solid rgb(192, 223, 56);
+            border-radius: 11px;
+        }
+        .right{
+            height: 20px;
+            position: relative;
+            top: -104px;
+        }
+        .right i{
+            color:rgb(223, 95, 56);
+            position: relative;
+            top: 1px;
+            font-size: 1.7rem;
+            left: 20px;
+            
+        }
+        /* .head img{
+            width: 100vw;
+            height: 75vh;
+        } */
+        .content{
+            position:absolute;
+            top:180%;
+            left:50%;
+            transform: translateX(-50%) translateY(-50%);
+            border:2px solid white;
+            font-family: 'Montserrat', sans-serif;
+            width: 500px;
+            height:400px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgb(192, 223, 56);;
+            opacity: 0.8;
+
+        }
+        .content:hover{
+            opacity: 1;
+        }
+        .hea{
+            margin: auto;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            top: 400px;
+            font-family:'Montserrat', sans-serif;
+            font-size: 2rem;
+            
+
+
+        }
+        #t{
+            color:rgb(192, 223, 56);
+            position: relative;
+            top: -60px;
+            font-size: 6rem;
+        }
+        .her{
+            text-align: center;
+            font-weight: 700;
+            font-size: x-large;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 10px;
+            padding-top: 5px;
+            color: rgb(192, 223, 56);;
+            font-family:'Montserrat', sans-serif;
+        }
+        .usr{
+            position:relative;
+            top:30px;
+            /* border-bottom: #dddddd; */
+            /* border:none; */
+            border-bottom: 2px solid #dddddd;
+            width:350px;
+            margin-left: 30px;
+            
+            
+            
+            
+        }
+        .usr input{
+            width:100%;
+            border:none;
+            position: relative;
+            top:25px;
+            background: none;
+            outline: none;
+            height: 40px;
+            padding-top: 5px;
+            font-size: 16px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+            
+        }
+        .usr1{
+            position: relative;
+            top:55px;
+            border-bottom: 2px solid #dddddd;
+            width:350px;
+            margin-left: 30px;
+            
+
+
+        }
+        .usr1 input{
+            width:100%;
+            border:none;
+            background: none;
+            outline: none;
+            height: 40px;
+            padding-top: 5px;
+            position: relative;
+            top:25px;
+            font-size: 16px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /* this is for pseudo selector in the case of focus */
+        .usr label{
+            color: #c2b9b9;
+            position: relative;
+            bottom: 10px;
+            
+            
+        }
+        /* note here valid is used so that the label styling does not restore its orignal state until valid */
+        .usr input:focus~label,.usr input:valid~label{
+            color:rgb(192, 223, 56);
+            top:-25px;
+            transition: 1.5s;
+            
+            
+        }
+        .usr1 label{
+            color:#c2b9b9;
+            position: relative;
+            bottom: 10px;
+            transition: 1.5s;
+        }
+        .usr1 input:focus~label,.usr1 input:valid~label{
+            color:rgb(192, 223, 56);
+            top:-25px;
+            transition: 1.5s;
+        }
+        
+        .txt{
+            position: relative;
+            top:95px;
+            margin-left: 30px;
+        }
+        .sign{
+            position: relative;
+            top:180px;
+            text-align: center;
+        }
+        
+        .login{
+            
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+            top:303px;
+
+            
+            
+        }
+        .login input{
+            width: 250px;
+            height: 35px;
+            margin: auto;
+            font-size: large;
+            font-weight: normal;
+            border: 2px solid rgb(192, 223, 56);;
+            border-radius: 20px;
+            background-color: rgb(192, 223, 56);;
+            color: #ffffff;
+
+        }
+        .login input:hover{
+            background-color:#000000;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <!-- <img src="car.png" alt="not found"> -->
+        <div class="mid">
+            <nav>
+                <ul>
+                    <li><a href="main.html" >Book</a></li>
+                    <li><a href="">Admin</a></li>
+                    <li><a href="">Cancel</a></li>
+                    <li><a href="https://www.olacabs.com/" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        <div class="right">
+            <i class="fa-solid fa-user"></i>;
+        </div>
+        <div class="hea">
+            <h1>KNOW YOUR EMPLOYEE</h1> 
+            <h1 id="t">DRIVERS</h1>
+        </div>
+        <div class="content">
+            <form action="get.py">
+                <div class="her">
+                    SEARCH
+                </div>
+                <div class="usr">
+                    <input type="text" name="Name" id="" required>
+                    <label>First Name</label>
+                </div>
+                <div class="usr1">
+                    <input type="text" name="pass" id="" required>
+                    <label>Last Name</label>
+                </div>
+                <div class="txt">
+                    Want to contribute to our green drive?
+                </div>
+                <div class="login">
+                    <input type="submit" value="Confirm">
+    
+                </div>
+                <div class="sign">
+                    New to gully? <a href="main.html">Sign</a>
+                </div>
+                
+    
+            </form>
+    
+        </div>
+    </header>
+    
+</body>
+</html>
